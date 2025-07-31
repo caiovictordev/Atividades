@@ -8,9 +8,15 @@ programa {
       leia(fila[i])
     }
 
-    escreva("\n----Pessosas em Sequência----\n")
+    escreva("\nOrdem de atendimento:\n")
     para (i = 0; i < 5; i++) {
       escreva(i+1, "° - ", fila[i], "\n")
+    }
+
+    escreva("\nIniciando atendimento...\n")
+    para (i = 0; i < 5; i++) {
+      escreva("Atendendo: ", fila[i], "\n")
+      escreva( fila[i], " foi atendida com sucesso.\n\n")
     }
   }
 }
