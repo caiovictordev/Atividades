@@ -1,20 +1,24 @@
-programa {
+programa 
+{
   cadeia fila[5]
   inteiro i
 
   funcao inicio() {
-    para (i = 0; i < 5; i++) {
+    para (i = 0; i < 5; i++) 
+    {
       escreva("Digite o nome da pessoa ", i+1, ": ")
       leia(fila[i])
     }
 
     escreva("\nOrdem de atendimento:\n")
-    para (i = 0; i < 5; i++) {
+    para (i = 0; i < 5; i++) 
+    {
       escreva(i+1, "° - ", fila[i], "\n")
     }
 
     escreva("\nIniciando atendimento...\n")
-    para (i = 0; i < 5; i++) {
+    para (i = 0; i < 5; i++) 
+    {
       escreva("Atendendo: ", fila[i], "\n")
       escreva( fila[i], " foi atendida com sucesso.\n\n")
     }
