@@ -1,6 +1,7 @@
 programa
 {
-	inteiro numero[10]
+	
+inteiro numero[10]
 	inteiro i, media = 0 , quantAci = 0, quantMed = 0
 	funcao inicio()
 	{
