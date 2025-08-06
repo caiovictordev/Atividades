@@ -1,78 +1,33 @@
 programa
-{	
-  inclua biblioteca Matematica	
-	const inteiro tam = 5
-	cadeia aluno[tam]
-	cadeia nome 
-	real notaM[tam] 
-	real n1 ,n2 , n3 , aMa ,aMe , aDm , arre
-	real media , divisao , Dm
-	real maior , soma=0.0
-	real menor 
-	inteiro cont=0 ,  i
+{
+	const inteiro tam = 3
+	inteiro valor[tam][tam]
+	inteiro i , j , s=0, cont 
+	inteiro media 
+	inteiro soma=0
+
 	funcao inicio()
 	{
-		para (i=0; i<tam; i++)
-		{ cont=0
-		escreva ("Digite o nome do aluno: ")
-		leia(aluno[i])	
-		escreva("\nDigite a ", cont+1 , "º nota do aluno: ")
-		leia(n1)
-		cont++
-		escreva("\nDigite a ", cont+1 , "º nota do aluno: ")
-		leia(n2)
-		cont++
-		escreva("\nDigite a ", cont+1 , "º nota do aluno: ")
-		leia(n3)	
-		//calculos de media
-		media = n1 + n2 + n3
-		divisao = media / 3 
-		notaM[i] = divisao 
+		para(j=0 ; j < tam ; j++)
+		{
+			para(i=0 ; i < tam ; i++)
+			{
+				escreva ("\nQuais os valores dos indices: ")
+				leia(valor[i][j])
+			}
+			escreva("\n")
+		}	escreva("Os valores na diagonal são: ")
+		para(i=0 ; i < tam ; i++)
+		{
+			escreva (valor[i][i], ",")
+		}	
 		escreva("\n")
-		}
-		para (i=0; i<tam; i++)
-	  {
-			arre= Matematica.arredondar(notaM[i], 2)
-			se (notaM[i]>=7)
-			{	
-				escreva ("\n",aluno[i], " Você foi Aprovado")
-				escreva ("\nSua media foi = ",arre,"\n")	
-			}senao se(notaM[i]>=5)
-			{
-				escreva ("\n",aluno[i], " Você ficou de Recuperação")
-				escreva ("\nSua media foi = ",arre,"\n")		
-			}senao se (notaM[i]<5)
-			{
-				escreva ("\n",aluno[i], " Você foi Reprovado ")
-				escreva ("\nSua media foi = ",arre,"\n")		
-			}
-			cont++
-		}
-			//loop de maior e menor media
-			maior = notaM[0]
-			menor = notaM[0]
-		para(i = 0 ; i < tam ; i++)
+		para(i=0 ; i < tam ; i++)
 		{
-			se(maior < notaM[i]){
-				maior = notaM[i]
-			}
-			se(menor > notaM[i])
-			{
-				menor = notaM[i]
-			}
+			soma = soma + valor[i][i]
+			media= soma / tam
 		}
-		
-			aMa= Matematica.arredondar(maior, 2)
-			aMe= Matematica.arredondar(menor, 2)
-			escreva("\nMaior nota foi = ",aMa)	
-			escreva("\nMenor nota foi = ",aMe,"\n")
-		para (i=0 ; i < tam ; i++)
-		{
-			soma = soma + notaM[i]
-		}
-			Dm = soma / tam
-			aDm= Matematica.arredondar(Dm, 2)
-			escreva ("\nA media dos ", tam ," alunos foi = " , aDm)  
-			escreva("\n")	
+		escreva("\nA media dos numeros na matriz foi: " , media)
+		escreva("\n")
 	}
 }
